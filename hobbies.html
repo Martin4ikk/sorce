@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мої захоплення</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #ff00ff 0%, #ff69b4 100%);
+            color: white;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+        .animated-line {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, red, orange, yellow, green, cyan, blue, violet);
+            background-size: 400% 100%;
+            animation: moveGradient 5s linear infinite;
+        }
+        @keyframes moveGradient {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+        h1 {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px 40px;
+            border-radius: 15px;
+            font-size: 3em;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            color: #fff;
+            opacity: 0;
+            transform: translateY(-50px);
+            animation: fadeIn 1.5s ease-out forwards;
+        }
+        p {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 15px;
+            border-radius: 10px;
+            width: 60%;
+            font-size: 1.2em;
+            line-height: 1.6;
+            text-align: justify;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInText 2s ease-out forwards;
+            animation-delay: 1.5s;
+        }
+        @keyframes fadeInText {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="animated-line"></div>
+    <h1>Мої захоплення</h1>
+    <p>Мені подобається програмування, зокрема розробка вебсайтів. У вільний час я також займаюся спортом, читаю книги і вивчаю нові технології.</p>
+</body>
+</html>
